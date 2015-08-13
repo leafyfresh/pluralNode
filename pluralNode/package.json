@@ -1,0 +1,10 @@
+{
+  "name": "pluralNode",
+  "version": "0.0.0",
+  "description": "pluralNode",
+  "main": "app.js",
+  "author": {
+    "name": "nathan.noonan",
+    "email": ""
+  }
+}
