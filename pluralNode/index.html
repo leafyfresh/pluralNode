@@ -20,6 +20,14 @@
                 $('#messages').append($('<li>').text(msg));
             });
         });
+
+        function queryUsers() {
+            socket.emit('dbInfoCall', $('#m').val());
+        }
+
+        function addUser() {
+            socket.emit('addUser', $('#m').val());
+        }
        
     </script>
     <style>
@@ -41,19 +49,19 @@
             width: 100%;
         }
 
-            form input {
-                border: 0;
-                padding: 10px;
-                width: 90%;
-                margin-right: .5%;
-            }
+        form input {
+            border: 0;
+            padding: 10px;
+            width: 90%;
+            margin-right: .5%;
+        }
 
-            form button {
-                width: 9%;
-                background: rgb(130, 224, 255);
-                border: none;
-                padding: 10px;
-            }
+        form button {
+            width: 9%;
+            background: rgb(130, 224, 255);
+            border: none;
+            padding: 10px;
+        }
 
         #messages {
             list-style-type: none;
@@ -61,18 +69,22 @@
             padding: 0;
         }
 
-            #messages li {
-                padding: 5px 10px;
-            }
+        #messages li {
+            padding: 5px 10px;
+        }
 
-                #messages li:nth-child(odd) {
-                    background: #eee;
-                }
+        #messages li:nth-child(odd) {
+            background: #eee;
+        }
+        #createNewUser{position:fixed;top:0px;right:0px;}
+        #getUser{position:fixed;top:50px;right:0px;}
     </style>
 </head>
 <body>
     <ul id="messages"></ul>
     <form action="">
+        <button  id="add user" onclick="addUser()">create new user</button>
+        <button id="getUser" onclick="getUser()">queryUsers</button>
         <input id="m" autocomplete="off" /><button>Send</button>
     </form>
 </body>

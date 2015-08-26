@@ -31,8 +31,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="models\task.js" />
-    <Compile Include="taskList.js" />
+    <Compile Include="models\user.js" />
+    <Compile Include="UserList.js" />
     <Compile Include="test.server.js" />
     <Content Include="index.html" />
     <Content Include="lion.html" />
